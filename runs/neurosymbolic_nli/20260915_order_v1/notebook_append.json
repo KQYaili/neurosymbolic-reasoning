@@ -1,0 +1,16 @@
+{
+  "main": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\2.ipynb",
+  "durable_copy": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\2.neurosymbolic.ipynb",
+  "added_cell_ids": [
+    "neurosymbolic-nli-v1-intro",
+    "neurosymbolic-nli-v1-load",
+    "neurosymbolic-nli-v1-method",
+    "neurosymbolic-nli-v1-model",
+    "neurosymbolic-nli-v1-logic",
+    "neurosymbolic-nli-v1-results",
+    "neurosymbolic-nli-v1-predict",
+    "neurosymbolic-nli-v1-reproduce",
+    "neurosymbolic-nli-v1-conclusion"
+  ],
+  "cell_count": 135
+}

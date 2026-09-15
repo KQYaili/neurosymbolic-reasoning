@@ -1,0 +1,29 @@
+{
+  "task": "SNLI 3-class NLI; not causal effect identification",
+  "train_cache": "runs/neurosymbolic_nli/20260915_order_v1",
+  "train_examples": 60000,
+  "seeds": [17, 29, 43],
+  "epochs": 4,
+  "batch_size": 256,
+  "max_length": 50,
+  "model_config": {"hidden_dim": 128, "dropout": 0.2},
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "gradient_clip": 1.0,
+  "arms": {
+    "uniform_ce": {"alignment": "uniform", "reverse_weight": 0.0, "consistency_weight": 0.0},
+    "aligned_ce": {"alignment": "learned", "reverse_weight": 0.0, "consistency_weight": 0.0},
+    "aligned_logic": {"alignment": "learned", "reverse_weight": 0.2, "consistency_weight": 0.1}
+  },
+  "pairing": "Identical initialized tensors, parameter counts, shuffle and dropout RNG paths within each seed; all arms compute both directions and auxiliary losses",
+  "checkpoint": "Final epoch only; same four epochs as V2; no mid-run tuning",
+  "selection": "After all training, select aligned_ce or aligned_logic by mean final official-dev accuracy across all three seeds; ties choose aligned_ce; default inference seed17 fixed",
+  "evaluation_order": "Write training_complete and dev-only selection before evaluating holdout or official test",
+  "holdout": "6000 previously unused official-train examples; strongest feasible group exclusion in holdout_manifest; same-domain audit, not a new benchmark",
+  "official_test": "Previously exposed during V1 and V2; report only as exploratory regression evidence",
+  "references": ["v2_neural_gru", "v2_order_gru"],
+  "comparison_pairs": [["aligned_ce", "uniform_ce"], ["aligned_logic", "aligned_ce"], ["aligned_ce", "v2_neural_gru"], ["aligned_logic", "v2_order_gru"]],
+  "confidence_interval": "Paired group bootstrap conditional on three fitted seed pairs; report all per-seed differences, not population seed uncertainty",
+  "bootstrap_seed": 20260916,
+  "bootstrap_repetitions": 2000
+}

@@ -1,0 +1,58 @@
+{
+  "all_passed": true,
+  "checks": {
+    "six_final_runs": true,
+    "frozen_protocol": true,
+    "frozen_sources": true,
+    "neural_seed17_metrics_and_final_epoch": true,
+    "order_regularized_seed17_metrics_and_final_epoch": true,
+    "neural_seed29_metrics_and_final_epoch": true,
+    "order_regularized_seed29_metrics_and_final_epoch": true,
+    "neural_seed43_metrics_and_final_epoch": true,
+    "order_regularized_seed43_metrics_and_final_epoch": true,
+    "seed17_paired_initial_state": true,
+    "seed17_same_parameter_count": true,
+    "seed29_paired_initial_state": true,
+    "seed29_same_parameter_count": true,
+    "seed43_paired_initial_state": true,
+    "seed43_same_parameter_count": true,
+    "paired_difference_recomputed": true,
+    "mathematical_checks": true,
+    "fresh_model_smoke": true,
+    "neural_trained_padding_invariance": true,
+    "neural_trained_batch_invariance": true,
+    "neural_trained_noncollapsed": true,
+    "order_regularized_trained_padding_invariance": true,
+    "order_regularized_trained_batch_invariance": true,
+    "order_regularized_trained_noncollapsed": true
+  },
+  "trained_model_invariants": {
+    "neural": {
+      "padding_max_abs": 0.0,
+      "batch_max_abs": 1.7136335372924805e-07,
+      "order_coordinate_std_mean": 0.2754499912261963,
+      "positive_order_coordinates": true
+    },
+    "order_regularized": {
+      "padding_max_abs": 0.0,
+      "batch_max_abs": 1.1920928955078125e-07,
+      "order_coordinate_std_mean": 0.7293195724487305,
+      "positive_order_coordinates": true
+    }
+  },
+  "artifacts_sha256": {
+    "checkpoints/neural_seed17_final.pt": "5d8feb3cff350aba83c33ac1893e163682f174e88be0a8770859cc03bc1b45e9",
+    "neural_seed17_test_predictions.npz": "bfaee7dfffb34d60fd432684984664786692dd22b7c4687310b8f18deb7be984",
+    "checkpoints/order_regularized_seed17_final.pt": "0a8cac83ba996efa50551d9b3b3b26442f9a0d8907d4cfa6b324f3b1ffaac562",
+    "order_regularized_seed17_test_predictions.npz": "d3864a9d71d268d9569fc56553516e6bacbfcbcbb3eacbe8d421b56736e82c21",
+    "checkpoints/neural_seed29_final.pt": "71cad7c80a311f966de5130d88058449b0987dc2fe6e4eb73d7951818aba9e96",
+    "neural_seed29_test_predictions.npz": "47f3f351a80428bb0b65d59629188561129a93c8471308246ed7a07166980ca8",
+    "checkpoints/order_regularized_seed29_final.pt": "15fd0e3491e861744c282e6f19d9e5b5e1897c5f4ad983518daaf2b1533e0942",
+    "order_regularized_seed29_test_predictions.npz": "ad6b5f0fe0d2835147bfbbc2ff07a083d2d632786aff365d93befa66c4f3b2b2",
+    "checkpoints/neural_seed43_final.pt": "adb45dea222e9815cf4586f992082395a5e2ae20220d6fe29bc73574ef59f841",
+    "neural_seed43_test_predictions.npz": "b2db68090bc47a82c11a0c7ac5b4f1538654d968a22e4be05a84c167f730f233",
+    "checkpoints/order_regularized_seed43_final.pt": "3af5dd7d5080a7c3ebb302a3cc707a1cf2a1fd91808204e4bdd4b898a9aec117",
+    "order_regularized_seed43_test_predictions.npz": "f722d367f98f8cf09fa82ef5bdd1c85a8f32c7f9010ad7101dc401ef6caf11ff"
+  },
+  "scope": "recomputed all six saved test predictions; paired starts; final epochs; source/data integrity; trained dev-sentence invariants"
+}

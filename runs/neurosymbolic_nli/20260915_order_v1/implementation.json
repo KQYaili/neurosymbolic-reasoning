@@ -1,0 +1,12 @@
+{
+  "source_sha256": {
+    "model.py": "2fa606ea7dea7ff660a9499b85fc5b847383552dc91015ae3fec4b71918e21c5",
+    "data.py": "c2d20a04cb7f6f353fafc1b7b18b266aa793ed68a5ec1a3093caede1450c7e96",
+    "run_experiment.py": "fa5ab1a053fdc4d04871da16b2d276f3e2cc18ef7fd7dd3c9f903aa7ccbaf066"
+  },
+  "precision": "float32, TF32 disabled",
+  "gradient_clip_max_norm": 1.0,
+  "embedding_trainable": true,
+  "vocabulary_min_frequency": 2,
+  "torch_version": "2.13.0+cu132"
+}

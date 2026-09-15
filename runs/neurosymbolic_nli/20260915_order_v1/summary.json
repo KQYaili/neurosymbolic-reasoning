@@ -1,0 +1,259 @@
+{
+  "protocol_sha256": "e45798b291dc5f18dc436f1db000d0ac0abda5806e2eee3672e00abd735d49ea",
+  "data_sha256": "d1b226ca5d12a17f872a3017be509d6c75ef9dc864b07a528c26e3ebb8f244e5",
+  "results": [
+    {
+      "arm": "neural",
+      "seed": 17,
+      "parameters": 1381583,
+      "training_seconds": 18.610422044992447,
+      "test": {
+        "accuracy": 0.724450325732899,
+        "macro_f1": 0.721170073529822,
+        "class_f1": [
+          0.7538635506973238,
+          0.7250829115028802,
+          0.6845637583892618
+        ],
+        "confusion_matrix": [
+          [
+            3000,
+            119,
+            249
+          ],
+          [
+            708,
+            2077,
+            452
+          ],
+          [
+            883,
+            296,
+            2040
+          ]
+        ],
+        "examples": 9824,
+        "mean_energy_entailment": 0.01507294736802578,
+        "mean_energy_non_entailment": 0.09660213440656662
+      },
+      "predictions": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/neurosymbolic_nli/20260915_order_v1/neural_seed17_test_predictions.npz"
+    },
+    {
+      "arm": "order_regularized",
+      "seed": 17,
+      "parameters": 1381583,
+      "training_seconds": 16.778744523006026,
+      "test": {
+        "accuracy": 0.7222109120521173,
+        "macro_f1": 0.7186426047237978,
+        "class_f1": [
+          0.7528498058374045,
+          0.7222125587058619,
+          0.6808654496281271
+        ],
+        "confusion_matrix": [
+          [
+            3005,
+            127,
+            236
+          ],
+          [
+            714,
+            2076,
+            447
+          ],
+          [
+            896,
+            309,
+            2014
+          ]
+        ],
+        "examples": 9824,
+        "mean_energy_entailment": 0.05542243272066116,
+        "mean_energy_non_entailment": 0.4475758671760559
+      },
+      "predictions": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/neurosymbolic_nli/20260915_order_v1/order_regularized_seed17_test_predictions.npz"
+    },
+    {
+      "arm": "neural",
+      "seed": 29,
+      "parameters": 1381583,
+      "training_seconds": 16.662501017999602,
+      "test": {
+        "accuracy": 0.727707654723127,
+        "macro_f1": 0.7248325494948743,
+        "class_f1": [
+          0.7614799265284702,
+          0.7090349447763896,
+          0.7039827771797632
+        ],
+        "confusion_matrix": [
+          [
+            2902,
+            108,
+            358
+          ],
+          [
+            642,
+            1958,
+            637
+          ],
+          [
+            710,
+            220,
+            2289
+          ]
+        ],
+        "examples": 9824,
+        "mean_energy_entailment": 0.08513938635587692,
+        "mean_energy_non_entailment": 0.0996168851852417
+      },
+      "predictions": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/neurosymbolic_nli/20260915_order_v1/neural_seed29_test_predictions.npz"
+    },
+    {
+      "arm": "order_regularized",
+      "seed": 29,
+      "parameters": 1381583,
+      "training_seconds": 18.26661823199538,
+      "test": {
+        "accuracy": 0.7265879478827362,
+        "macro_f1": 0.7237137645319973,
+        "class_f1": [
+          0.7599110297003794,
+          0.7088880892407341,
+          0.7023421746548782
+        ],
+        "confusion_matrix": [
+          [
+            2904,
+            110,
+            354
+          ],
+          [
+            657,
+            1970,
+            610
+          ],
+          [
+            714,
+            241,
+            2264
+          ]
+        ],
+        "examples": 9824,
+        "mean_energy_entailment": 0.05561403930187225,
+        "mean_energy_non_entailment": 0.44462645053863525
+      },
+      "predictions": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/neurosymbolic_nli/20260915_order_v1/order_regularized_seed29_test_predictions.npz"
+    },
+    {
+      "arm": "neural",
+      "seed": 43,
+      "parameters": 1381583,
+      "training_seconds": 16.452280219004024,
+      "test": {
+        "accuracy": 0.7437907166123778,
+        "macro_f1": 0.7431232893196341,
+        "class_f1": [
+          0.7702549575070822,
+          0.7433510638297873,
+          0.715763846622033
+        ],
+        "confusion_matrix": [
+          [
+            2719,
+            193,
+            456
+          ],
+          [
+            456,
+            2236,
+            545
+          ],
+          [
+            517,
+            350,
+            2352
+          ]
+        ],
+        "examples": 9824,
+        "mean_energy_entailment": 0.03161962330341339,
+        "mean_energy_non_entailment": 0.08183834701776505
+      },
+      "predictions": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/neurosymbolic_nli/20260915_order_v1/neural_seed43_test_predictions.npz"
+    },
+    {
+      "arm": "order_regularized",
+      "seed": 43,
+      "parameters": 1381583,
+      "training_seconds": 16.28684214000532,
+      "test": {
+        "accuracy": 0.7412459283387622,
+        "macro_f1": 0.7405957421023469,
+        "class_f1": [
+          0.7667939471079055,
+          0.7424970983253191,
+          0.7124961808738162
+        ],
+        "confusion_matrix": [
+          [
+            2711,
+            202,
+            455
+          ],
+          [
+            458,
+            2239,
+            540
+          ],
+          [
+            534,
+            353,
+            2332
+          ]
+        ],
+        "examples": 9824,
+        "mean_energy_entailment": 0.06332264095544815,
+        "mean_energy_non_entailment": 0.49035388231277466
+      },
+      "predictions": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/neurosymbolic_nli/20260915_order_v1/order_regularized_seed43_test_predictions.npz"
+    }
+  ],
+  "aggregate": {
+    "neural": {
+      "accuracy": {
+        "mean": 0.7319828990228013,
+        "std": 0.010354755680805787
+      },
+      "macro_f1": {
+        "mean": 0.7297086374481102,
+        "std": 0.011760871403696364
+      }
+    },
+    "order_regularized": {
+      "accuracy": {
+        "mean": 0.7300149294245385,
+        "std": 0.009969509171674417
+      },
+      "macro_f1": {
+        "mean": 0.7276507037860473,
+        "std": 0.01149389743333054
+      }
+    }
+  },
+  "order_minus_neural_accuracy_by_seed": [
+    -0.002239413680781732,
+    -0.001119706840390866,
+    -0.0025447882736155947
+  ],
+  "order_minus_neural_accuracy_mean": -0.001967969598262731,
+  "paired_example_bootstrap_95ci": [
+    -0.003732356134636265,
+    -0.0001696525515743757
+  ],
+  "ci_scope": "paired test-example resampling conditional on the three fitted seed pairs; not seed uncertainty",
+  "notes": [
+    "Official SNLI 3-class classification, not causal-effect estimation.",
+    "Final-epoch checkpoints only; no test-based tuning or checkpoint selection."
+  ]
+}

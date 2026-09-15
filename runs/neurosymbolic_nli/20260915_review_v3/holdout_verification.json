@@ -1,0 +1,59 @@
+{
+  "all_passed": true,
+  "checked_source_records": 6000,
+  "checks": {
+    "holdout_file_hash": true,
+    "v1_cache_hash": true,
+    "v1_protocol_hash": true,
+    "v1_vocab_hash": true,
+    "preparer_hash": true,
+    "count_and_balance": true,
+    "image_rule_not_relaxed": true,
+    "unique_source_rows": true,
+    "train_source_hash": true,
+    "dev_source_hash": true,
+    "test_source_hash": true,
+    "all_selected_source_rows_found": true,
+    "independent_source_reconstruction_premises": true,
+    "independent_source_reconstruction_hypotheses": true,
+    "independent_source_reconstruction_premise_lengths": true,
+    "independent_source_reconstruction_hypothesis_lengths": true,
+    "all_reference_pair_premise_caption_image_overlaps_zero": true,
+    "recorded_overlap_checks_match": true,
+    "unique_pairs_and_ids": true,
+    "recorded_group_counts_match": true
+  },
+  "overlaps": {
+    "train": {
+      "pairs": 0,
+      "pair_ids": 0,
+      "premises": 0,
+      "images": 0,
+      "captions": 0
+    },
+    "dev": {
+      "pairs": 0,
+      "pair_ids": 0,
+      "premises": 0,
+      "images": 0,
+      "captions": 0
+    },
+    "test": {
+      "pairs": 0,
+      "pair_ids": 0,
+      "premises": 0,
+      "images": 0,
+      "captions": 0
+    }
+  },
+  "selected_groups": {
+    "pairs": 6000,
+    "pair_ids": 6000,
+    "premises": 5327,
+    "images": 3135,
+    "captions": 5328
+  },
+  "holdout_sha256": "e2c558ed09cf4dbe0ecd6d3d8280da4f49c5cd1e5180b112be11656f9a5c5697",
+  "verifier_sha256": "98cc414c52d05e3540ef9936872a61865522d920e996d988b154565bf1908f77",
+  "verification": "Separate csv.DictReader parser and independent tensor reconstruction; preparer functions not imported."
+}

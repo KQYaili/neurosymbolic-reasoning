@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": {
+    "embedding_shape_finite_and_pad_zero": true,
+    "train_tensor_schema_lengths_padding_ids": true,
+    "dev_tensor_schema_lengths_padding_ids": true,
+    "test_tensor_schema_lengths_padding_ids": true,
+    "all_three_source_checksums": true,
+    "all_60000_train_rows_match_original_source_encoding_and_labels": true,
+    "vocab_exactly_from_sampled_train_min_frequency_2": true
+  },
+  "checked_train_rows": 60000,
+  "vocab_size": 12187,
+  "cache_sha256": "d1b226ca5d12a17f872a3017be509d6c75ef9dc864b07a528c26e3ebb8f244e5"
+}

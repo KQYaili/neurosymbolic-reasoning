@@ -1,0 +1,708 @@
+{
+  "protocol_sha256": "e869bb6b1ddeaab2864e7d16fa3b222c96d45a5609ad7103ba655afaf99cbc32",
+  "data_sha256": "d58805e89c8d083051e375d01d39ed3d1abcc596a9c482a62b4e98910905e4b5",
+  "results": [
+    {
+      "arm": "neural_gru",
+      "seed": 17,
+      "encoder": "gru",
+      "loss_type": "none",
+      "parameters": 1382519,
+      "training_seconds": 26.213914199965075,
+      "test": {
+        "accuracy": 0.7267915309446255,
+        "macro_f1": 0.7236237157226714,
+        "class_f1": [
+          0.7564845127171997,
+          0.7272088529773405,
+          0.6871777814734741
+        ],
+        "confusion_matrix": [
+          [
+            3004,
+            115,
+            249
+          ],
+          [
+            688,
+            2070,
+            479
+          ],
+          [
+            882,
+            271,
+            2066
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.10550493001937866,
+        "mean_fwd_energy_contradiction": 0.22232504189014435,
+        "mean_fwd_energy_neutral": 0.13933520019054413,
+        "mean_cos_sim_contradiction": 0.8157666921615601,
+        "mean_cos_sim_entailment": 0.9100818634033203
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\neural_gru_seed17_test_predictions.npz"
+    },
+    {
+      "arm": "v1_order_gru",
+      "seed": 17,
+      "encoder": "gru",
+      "loss_type": "v1",
+      "parameters": 1382519,
+      "training_seconds": 23.714618199970573,
+      "test": {
+        "accuracy": 0.72689332247557,
+        "macro_f1": 0.7237213206407924,
+        "class_f1": [
+          0.7574188660184367,
+          0.7225372076541461,
+          0.6912078882497946
+        ],
+        "confusion_matrix": [
+          [
+            2999,
+            113,
+            256
+          ],
+          [
+            691,
+            2039,
+            507
+          ],
+          [
+            861,
+            255,
+            2103
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.067372165620327,
+        "mean_fwd_energy_contradiction": 0.20193684101104736,
+        "mean_fwd_energy_neutral": 0.15218955278396606,
+        "mean_cos_sim_contradiction": 0.80991530418396,
+        "mean_cos_sim_entailment": 0.9076557159423828
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v1_order_gru_seed17_test_predictions.npz"
+    },
+    {
+      "arm": "v2_order_gru",
+      "seed": 17,
+      "encoder": "gru",
+      "loss_type": "v2_threeway",
+      "parameters": 1382519,
+      "training_seconds": 21.447823900030926,
+      "test": {
+        "accuracy": 0.7269951140065146,
+        "macro_f1": 0.7240894580625582,
+        "class_f1": [
+          0.7565848072273826,
+          0.7282248210857043,
+          0.6874587458745874
+        ],
+        "confusion_matrix": [
+          [
+            2973,
+            122,
+            273
+          ],
+          [
+            666,
+            2086,
+            485
+          ],
+          [
+            852,
+            284,
+            2083
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.08805827051401138,
+        "mean_fwd_energy_contradiction": 0.2276080697774887,
+        "mean_fwd_energy_neutral": 0.14329583942890167,
+        "mean_cos_sim_contradiction": 0.7303200364112854,
+        "mean_cos_sim_entailment": 0.867196798324585
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v2_order_gru_seed17_test_predictions.npz"
+    },
+    {
+      "arm": "neural_bigru_attn",
+      "seed": 17,
+      "encoder": "bigru_attn",
+      "loss_type": "none",
+      "parameters": 1366264,
+      "training_seconds": 32.85888349998277,
+      "test": {
+        "accuracy": 0.7290309446254072,
+        "macro_f1": 0.7258090650636208,
+        "class_f1": [
+          0.7571500250878073,
+          0.7339927121290993,
+          0.6862844579739558
+        ],
+        "confusion_matrix": [
+          [
+            3018,
+            112,
+            238
+          ],
+          [
+            695,
+            2115,
+            427
+          ],
+          [
+            891,
+            299,
+            2029
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.14380791783332825,
+        "mean_fwd_energy_contradiction": 0.29614147543907166,
+        "mean_fwd_energy_neutral": 0.18472830951213837,
+        "mean_cos_sim_contradiction": 0.7764071822166443,
+        "mean_cos_sim_entailment": 0.8957780003547668
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\neural_bigru_attn_seed17_test_predictions.npz"
+    },
+    {
+      "arm": "v2_order_bigru_attn",
+      "seed": 17,
+      "encoder": "bigru_attn",
+      "loss_type": "v2_threeway",
+      "parameters": 1366264,
+      "training_seconds": 33.25531959999353,
+      "test": {
+        "accuracy": 0.7307614006514658,
+        "macro_f1": 0.7277737231769986,
+        "class_f1": [
+          0.7564182842830307,
+          0.7389572146197817,
+          0.6879456706281833
+        ],
+        "confusion_matrix": [
+          [
+            3020,
+            116,
+            232
+          ],
+          [
+            691,
+            2133,
+            413
+          ],
+          [
+            906,
+            287,
+            2026
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.08784988522529602,
+        "mean_fwd_energy_contradiction": 0.27478671073913574,
+        "mean_fwd_energy_neutral": 0.15468712151050568,
+        "mean_cos_sim_contradiction": 0.6890566349029541,
+        "mean_cos_sim_entailment": 0.8544831871986389
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v2_order_bigru_attn_seed17_test_predictions.npz"
+    },
+    {
+      "arm": "neural_gru",
+      "seed": 29,
+      "encoder": "gru",
+      "loss_type": "none",
+      "parameters": 1382519,
+      "training_seconds": 19.64069849997759,
+      "test": {
+        "accuracy": 0.730964983713355,
+        "macro_f1": 0.7282809190021272,
+        "class_f1": [
+          0.7648605996843767,
+          0.7155699388709098,
+          0.7044122184510953
+        ],
+        "confusion_matrix": [
+          [
+            2908,
+            107,
+            353
+          ],
+          [
+            620,
+            1990,
+            627
+          ],
+          [
+            708,
+            228,
+            2283
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.1016482338309288,
+        "mean_fwd_energy_contradiction": 0.210499569773674,
+        "mean_fwd_energy_neutral": 0.13337001204490662,
+        "mean_cos_sim_contradiction": 0.8269550800323486,
+        "mean_cos_sim_entailment": 0.9107434749603271
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\neural_gru_seed29_test_predictions.npz"
+    },
+    {
+      "arm": "v1_order_gru",
+      "seed": 29,
+      "encoder": "gru",
+      "loss_type": "v1",
+      "parameters": 1382519,
+      "training_seconds": 19.877679700031877,
+      "test": {
+        "accuracy": 0.7363599348534202,
+        "macro_f1": 0.7343490465849299,
+        "class_f1": [
+          0.7670108551760657,
+          0.7296625222024866,
+          0.7063737623762375
+        ],
+        "confusion_matrix": [
+          [
+            2897,
+            106,
+            365
+          ],
+          [
+            586,
+            2054,
+            597
+          ],
+          [
+            703,
+            233,
+            2283
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.06321468949317932,
+        "mean_fwd_energy_contradiction": 0.20563837885856628,
+        "mean_fwd_energy_neutral": 0.15095719695091248,
+        "mean_cos_sim_contradiction": 0.8139677047729492,
+        "mean_cos_sim_entailment": 0.9050926566123962
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v1_order_gru_seed29_test_predictions.npz"
+    },
+    {
+      "arm": "v2_order_gru",
+      "seed": 29,
+      "encoder": "gru",
+      "loss_type": "v2_threeway",
+      "parameters": 1382519,
+      "training_seconds": 20.310178800020367,
+      "test": {
+        "accuracy": 0.7327972312703583,
+        "macro_f1": 0.7305045283282002,
+        "class_f1": [
+          0.7642640664119121,
+          0.7223314857858038,
+          0.7049180327868851
+        ],
+        "confusion_matrix": [
+          [
+            2900,
+            108,
+            360
+          ],
+          [
+            609,
+            2020,
+            608
+          ],
+          [
+            712,
+            228,
+            2279
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.08365742862224579,
+        "mean_fwd_energy_contradiction": 0.25721490383148193,
+        "mean_fwd_energy_neutral": 0.14038535952568054,
+        "mean_cos_sim_contradiction": 0.7017322778701782,
+        "mean_cos_sim_entailment": 0.8337429761886597
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v2_order_gru_seed29_test_predictions.npz"
+    },
+    {
+      "arm": "neural_bigru_attn",
+      "seed": 29,
+      "encoder": "bigru_attn",
+      "loss_type": "none",
+      "parameters": 1366264,
+      "training_seconds": 33.01909670000896,
+      "test": {
+        "accuracy": 0.728521986970684,
+        "macro_f1": 0.7257028285010101,
+        "class_f1": [
+          0.7603497042941632,
+          0.7204012179831631,
+          0.6963575632257039
+        ],
+        "confusion_matrix": [
+          [
+            2957,
+            106,
+            305
+          ],
+          [
+            652,
+            2011,
+            574
+          ],
+          [
+            801,
+            229,
+            2189
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.1293327361345291,
+        "mean_fwd_energy_contradiction": 0.33695274591445923,
+        "mean_fwd_energy_neutral": 0.1745314747095108,
+        "mean_cos_sim_contradiction": 0.7712026238441467,
+        "mean_cos_sim_entailment": 0.8937090039253235
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\neural_bigru_attn_seed29_test_predictions.npz"
+    },
+    {
+      "arm": "v2_order_bigru_attn",
+      "seed": 29,
+      "encoder": "bigru_attn",
+      "loss_type": "v2_threeway",
+      "parameters": 1366264,
+      "training_seconds": 33.332757900003344,
+      "test": {
+        "accuracy": 0.728521986970684,
+        "macro_f1": 0.725609369190679,
+        "class_f1": [
+          0.7615987662254208,
+          0.7210592234746824,
+          0.6941701178719336
+        ],
+        "confusion_matrix": [
+          [
+            2963,
+            102,
+            303
+          ],
+          [
+            645,
+            2015,
+            577
+          ],
+          [
+            805,
+            235,
+            2179
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.09197860956192017,
+        "mean_fwd_energy_contradiction": 0.31884080171585083,
+        "mean_fwd_energy_neutral": 0.1570754051208496,
+        "mean_cos_sim_contradiction": 0.6979602575302124,
+        "mean_cos_sim_entailment": 0.8430728316307068
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v2_order_bigru_attn_seed29_test_predictions.npz"
+    },
+    {
+      "arm": "neural_gru",
+      "seed": 43,
+      "encoder": "gru",
+      "loss_type": "none",
+      "parameters": 1382519,
+      "training_seconds": 19.232720700092614,
+      "test": {
+        "accuracy": 0.7429763843648208,
+        "macro_f1": 0.7426679018299175,
+        "class_f1": [
+          0.7699611566681053,
+          0.7450199203187251,
+          0.7130226285029222
+        ],
+        "confusion_matrix": [
+          [
+            2676,
+            192,
+            500
+          ],
+          [
+            418,
+            2244,
+            575
+          ],
+          [
+            489,
+            351,
+            2379
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.12345588952302933,
+        "mean_fwd_energy_contradiction": 0.23743924498558044,
+        "mean_fwd_energy_neutral": 0.16034744679927826,
+        "mean_cos_sim_contradiction": 0.799613893032074,
+        "mean_cos_sim_entailment": 0.8992673754692078
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\neural_gru_seed43_test_predictions.npz"
+    },
+    {
+      "arm": "v1_order_gru",
+      "seed": 43,
+      "encoder": "gru",
+      "loss_type": "v1",
+      "parameters": 1382519,
+      "training_seconds": 19.79758670006413,
+      "test": {
+        "accuracy": 0.7430781758957655,
+        "macro_f1": 0.7428283185219228,
+        "class_f1": [
+          0.7696297363492292,
+          0.7457233017771134,
+          0.7131319174394256
+        ],
+        "confusion_matrix": [
+          [
+            2671,
+            200,
+            497
+          ],
+          [
+            406,
+            2245,
+            586
+          ],
+          [
+            496,
+            339,
+            2384
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.07014913111925125,
+        "mean_fwd_energy_contradiction": 0.231361523270607,
+        "mean_fwd_energy_neutral": 0.19426608085632324,
+        "mean_cos_sim_contradiction": 0.7791903018951416,
+        "mean_cos_sim_entailment": 0.8886798620223999
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v1_order_gru_seed43_test_predictions.npz"
+    },
+    {
+      "arm": "v2_order_gru",
+      "seed": 43,
+      "encoder": "gru",
+      "loss_type": "v2_threeway",
+      "parameters": 1382519,
+      "training_seconds": 20.585034499992616,
+      "test": {
+        "accuracy": 0.744299674267101,
+        "macro_f1": 0.7440990987111221,
+        "class_f1": [
+          0.7722800925925926,
+          0.7460502245135539,
+          0.71396697902722
+        ],
+        "confusion_matrix": [
+          [
+            2669,
+            190,
+            509
+          ],
+          [
+            399,
+            2243,
+            595
+          ],
+          [
+            476,
+            343,
+            2400
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.08575865626335144,
+        "mean_fwd_energy_contradiction": 0.24589644372463226,
+        "mean_fwd_energy_neutral": 0.16684675216674805,
+        "mean_cos_sim_contradiction": 0.645343542098999,
+        "mean_cos_sim_entailment": 0.797463595867157
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v2_order_gru_seed43_test_predictions.npz"
+    },
+    {
+      "arm": "neural_bigru_attn",
+      "seed": 43,
+      "encoder": "bigru_attn",
+      "loss_type": "none",
+      "parameters": 1366264,
+      "training_seconds": 84.3497976999497,
+      "test": {
+        "accuracy": 0.7425692182410424,
+        "macro_f1": 0.7422066453659456,
+        "class_f1": [
+          0.7668539325842697,
+          0.7443791075752335,
+          0.7153868959383338
+        ],
+        "confusion_matrix": [
+          [
+            2730,
+            125,
+            513
+          ],
+          [
+            484,
+            2152,
+            601
+          ],
+          [
+            538,
+            268,
+            2413
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.1472742259502411,
+        "mean_fwd_energy_contradiction": 0.2632695436477661,
+        "mean_fwd_energy_neutral": 0.1745404601097107,
+        "mean_cos_sim_contradiction": 0.7754367589950562,
+        "mean_cos_sim_entailment": 0.8894475698471069
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\neural_bigru_attn_seed43_test_predictions.npz"
+    },
+    {
+      "arm": "v2_order_bigru_attn",
+      "seed": 43,
+      "encoder": "bigru_attn",
+      "loss_type": "v2_threeway",
+      "parameters": 1366264,
+      "training_seconds": 65.59553190006409,
+      "test": {
+        "accuracy": 0.7413477198697068,
+        "macro_f1": 0.7409383980547263,
+        "class_f1": [
+          0.7662319450287477,
+          0.7434880110401934,
+          0.713095238095238
+        ],
+        "confusion_matrix": [
+          [
+            2732,
+            131,
+            505
+          ],
+          [
+            482,
+            2155,
+            600
+          ],
+          [
+            549,
+            274,
+            2396
+          ]
+        ],
+        "examples": 9824,
+        "mean_fwd_energy_entailment": 0.1090121865272522,
+        "mean_fwd_energy_contradiction": 0.24677304923534393,
+        "mean_fwd_energy_neutral": 0.15336066484451294,
+        "mean_cos_sim_contradiction": 0.7097426056861877,
+        "mean_cos_sim_entailment": 0.8582740426063538
+      },
+      "predictions": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2\\v2_order_bigru_attn_seed43_test_predictions.npz"
+    }
+  ],
+  "aggregate": {
+    "neural_gru": {
+      "accuracy": {
+        "mean": 0.7335776330076005,
+        "std": 0.00840278658001875
+      },
+      "macro_f1": {
+        "mean": 0.7315241788515721,
+        "std": 0.00992770401251579
+      }
+    },
+    "v1_order_gru": {
+      "accuracy": {
+        "mean": 0.7354438110749185,
+        "std": 0.008131225746556019
+      },
+      "macro_f1": {
+        "mean": 0.7336328952492152,
+        "std": 0.009573609379910725
+      }
+    },
+    "v2_order_gru": {
+      "accuracy": {
+        "mean": 0.7346973398479913,
+        "std": 0.00880736969294249
+      },
+      "macro_f1": {
+        "mean": 0.7328976950339602,
+        "std": 0.010217233719668638
+      }
+    },
+    "neural_bigru_attn": {
+      "accuracy": {
+        "mean": 0.7333740499457111,
+        "std": 0.007967314444539835
+      },
+      "macro_f1": {
+        "mean": 0.7312395129768587,
+        "std": 0.009497963791341081
+      }
+    },
+    "v2_order_bigru_attn": {
+      "accuracy": {
+        "mean": 0.7335437024972856,
+        "std": 0.006850602803418681
+      },
+      "macro_f1": {
+        "mean": 0.731440496807468,
+        "std": 0.008296306595198118
+      }
+    }
+  },
+  "comparisons": {
+    "v1_minus_neural_gru": {
+      "by_seed": [
+        0.00010179153094458382,
+        0.005394951140065163,
+        0.00010179153094469484
+      ],
+      "mean": 0.0018661780673181472
+    },
+    "v2_minus_neural_gru": {
+      "by_seed": [
+        0.00020358306188916764,
+        0.001832247557003286,
+        0.0013232899022801448
+      ],
+      "mean": 0.001119706840390866,
+      "bootstrap_95ci": [
+        -0.0008143322475570031,
+        0.002951954397394137
+      ]
+    },
+    "v2_minus_neural_bigru_attn": {
+      "by_seed": [
+        0.001730456026058591,
+        0.0,
+        -0.001221498371335561
+      ],
+      "mean": 0.00016965255157434336
+    }
+  },
+  "notes": [
+    "Official SNLI 3-class classification, paired evaluation across 3 seeds (17, 29, 43).",
+    "Track A compares neural_gru vs v1_order_gru vs v2_order_gru under identical weights.",
+    "Track B compares neural_bigru_attn vs v2_order_bigru_attn under identical weights."
+  ]
+}

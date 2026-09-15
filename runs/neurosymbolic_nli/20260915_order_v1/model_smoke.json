@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "device": "cuda:0",
+  "torch": "2.13.0+cu132",
+  "padding_max_abs": 0.0,
+  "batch_max_abs": 7.450580596923828e-09,
+  "loss": 1.1158568859100342,
+  "all_gradients_finite": true,
+  "cache_checked": true,
+  "precision": "float32, TF32 disabled"
+}

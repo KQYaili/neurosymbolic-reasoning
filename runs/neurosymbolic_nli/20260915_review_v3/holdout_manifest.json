@@ -1,0 +1,139 @@
+{
+  "purpose": "Frozen unused-official-train SNLI in-domain audit; not official test, independent domain, or causal inference.",
+  "selection_used_model_predictions": false,
+  "selection_used_linguistic_difficulty": false,
+  "sampling_seed": 20260916,
+  "target_per_label": 2000,
+  "label_to_id": {
+    "entailment": 0,
+    "contradiction": 1,
+    "neutral": 2
+  },
+  "source": "data/snli_1.0/snli_1.0_train.txt",
+  "group_rule": "image_disjoint",
+  "normalization": "Parse tokens from sentence{1,2}_binary_parse, parentheses removed and whitespace split; each token NFKC normalized and casefolded. Ordered full token tuples before truncation.",
+  "group_definition": "SNLI captionID before first # is image ID; exact full normalized premise is premise group.",
+  "selection_rule": "Exclude normalized pair or pairID seen in any v1 train/dev/test; keep first source occurrence of candidate duplicate pair or ID; exclude normalized premise seen in any v1 split; prefer exclusion of all seen image IDs when >=2000 eligible rows in each label, otherwise explicitly use premise-only exclusion. Class-wise reservoir sampling with Random(seed+label), then shuffle with Random(seed).",
+  "encoding": "Reuse v1 vocabulary and data._encode unchanged: case-preserving parse tokens, OOV=1, PAD=0, max_length=50, empty -> UNK. No vocabulary fitting on holdout.",
+  "reference_split_stats": {
+    "train": {
+      "verified_source_rows": 60000,
+      "pairs": 59994,
+      "pair_ids": 60000,
+      "premises": 48505,
+      "images": 26573,
+      "captions": 48572
+    },
+    "dev": {
+      "verified_source_rows": 9842,
+      "pairs": 9840,
+      "pair_ids": 9842,
+      "premises": 3319,
+      "images": 3059,
+      "captions": 3319
+    },
+    "test": {
+      "verified_source_rows": 9824,
+      "pairs": 9824,
+      "pair_ids": 9824,
+      "premises": 3323,
+      "images": 3061,
+      "captions": 3323
+    }
+  },
+  "filter_counts_in_order": {
+    "source_valid_rows": 549367,
+    "v1_image_overlap_after_premise_filter": 262606,
+    "v1_premise_overlap_after_pair_deduplication": 165340,
+    "v1_normalized_pair_overlap": 60144,
+    "within_candidate_duplicate_pair_or_id_first_source_row_retained": 504
+  },
+  "candidate_feasibility": {
+    "image_disjoint": {
+      "eligible_label_counts": {
+        "0": 20282,
+        "1": 20284,
+        "2": 20207
+      },
+      "feasible": true
+    },
+    "premise_disjoint": {
+      "eligible_label_counts": {
+        "0": 107938,
+        "1": 107889,
+        "2": 107552
+      },
+      "feasible": true
+    }
+  },
+  "premise_disjoint_candidate_unique_premises": 102162,
+  "image_disjoint_candidate_unique_images": 3950,
+  "selected_unique_groups": {
+    "pairs": 6000,
+    "pair_ids": 6000,
+    "premises": 5327,
+    "images": 3135,
+    "captions": 5328
+  },
+  "overlap_with_v1_by_split": {
+    "train": {
+      "pairs": 0,
+      "pair_ids": 0,
+      "premises": 0,
+      "images": 0,
+      "captions": 0
+    },
+    "dev": {
+      "pairs": 0,
+      "pair_ids": 0,
+      "premises": 0,
+      "images": 0,
+      "captions": 0
+    },
+    "test": {
+      "pairs": 0,
+      "pair_ids": 0,
+      "premises": 0,
+      "images": 0,
+      "captions": 0
+    }
+  },
+  "encoded_stats": {
+    "count": 6000,
+    "label_counts": {
+      "0": 2000,
+      "1": 2000,
+      "2": 2000
+    },
+    "unknown_tokens": {
+      "premise": 927,
+      "hypothesis": 739
+    },
+    "encoded_tokens": {
+      "premise": 79305,
+      "hypothesis": 48765
+    },
+    "truncated_sentences": {
+      "premise": 3,
+      "hypothesis": 0
+    },
+    "empty_sentences_replaced_by_unk": {
+      "premise": 0,
+      "hypothesis": 0
+    }
+  },
+  "source_row_numbering": "1-based physical line; header is line 1",
+  "dependence_note": "Several selected examples may share an image/premise; use image-group resampling for confidence intervals. Image-disjointness controls direct group reuse but does not remove SNLI annotation artifacts or domain dependence.",
+  "all_checks_passed": true,
+  "source_sha256": {
+    "train": "4c30401826aefc454ffe6bb081b83a8e3a6fb7493d6ba63ed880949778d6c845",
+    "dev": "5187e5d0d81faeb43a560a30ab8170de28759db01170c60ae0b3969e827c92f1",
+    "test": "b2913ad9323f05ef5d7722a51f8420d8fb0967cf4224437162b48a622778945a"
+  },
+  "v1_cache_sha256": "d1b226ca5d12a17f872a3017be509d6c75ef9dc864b07a528c26e3ebb8f244e5",
+  "v1_protocol_sha256": "e45798b291dc5f18dc436f1db000d0ac0abda5806e2eee3672e00abd735d49ea",
+  "v1_vocab_sha256": "45c720d48f2c9af278ea2c8ecda7f43e134e51dbc8f051436bc79235b8de8c22",
+  "preparer_sha256": "4bd3efc810e300437a49efc8167e5e929e12658bada29b333da84bc0fbd15c39",
+  "selected_rows_sha256": "44687c9ca0ca964342d9f998a2ee1c2a5d27464d934fc27b129954bb283fbd5b",
+  "holdout_sha256": "e2c558ed09cf4dbe0ecd6d3d8280da4f49c5cd1e5180b112be11656f9a5c5697"
+}

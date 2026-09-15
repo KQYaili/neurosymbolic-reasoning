@@ -1,0 +1,47 @@
+{
+  "notebook": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\2.ipynb",
+  "original_sha256": "e2a156e3533085cb6132f281929150c92746ae37e59590d2093e7ebc65a4b02f",
+  "backup": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v1\\2.before_dependencies.e2a156e35330.ipynb",
+  "candidate": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v1\\2.dependencies.candidate.ipynb",
+  "cell_count_before": 126,
+  "cell_count_after": 126,
+  "changed_cells": [
+    {
+      "cell_index": 1,
+      "cell_id": "4f78861b-dbf2-4360-ab62-b213c8011098",
+      "changes": [
+        "restore cached extraction, progress and tar data filter"
+      ]
+    },
+    {
+      "cell_index": 72,
+      "cell_id": "075da873-a8e7-466b-a136-9abe71cffc94",
+      "changes": [
+        "evaluate_accuracy_gpu: accept list and tuple features",
+        "train_batch_ch13: accept list and tuple features",
+        "train_ch13: count examples from labels for multi-input models"
+      ]
+    },
+    {
+      "cell_index": 83,
+      "cell_id": "28a6c20a-8daf-4125-a2a6-c39efca7e581",
+      "changes": [
+        "initialize IMDb in native home cache instead of mounted Windows data"
+      ]
+    },
+    {
+      "cell_index": 88,
+      "cell_id": "05b80d10-c829-4afa-af41-bb155263249e",
+      "changes": [
+        "load_data_imdb: avoid later SNLI overwriting global data_dir"
+      ]
+    }
+  ],
+  "audit": {
+    "compiled_code_cells": 124,
+    "undefined_names": [],
+    "other_pyflakes_messages": 11,
+    "scope": "all code cells compiled; pyflakes undefined-name audit of ordered concatenation"
+  },
+  "applied": true
+}

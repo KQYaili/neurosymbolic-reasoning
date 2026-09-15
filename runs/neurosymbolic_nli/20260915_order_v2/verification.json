@@ -1,0 +1,93 @@
+{
+  "run_dir": "C:\\Users\\lgd\\PycharmProjects\\JupyterProject1\\runs\\neurosymbolic_nli\\20260915_order_v2",
+  "checks": {
+    "fifteen_final_runs": true,
+    "frozen_protocol": true,
+    "frozen_sources": true,
+    "paired_initial_weights": true,
+    "padding_invariance_all_checkpoints": true
+  },
+  "all_passed": true,
+  "comparisons": {
+    "v1_minus_neural_gru": {
+      "by_seed": [
+        0.00010179153094458382,
+        0.005394951140065163,
+        0.00010179153094469484
+      ],
+      "mean": 0.0018661780673181472
+    },
+    "v2_minus_neural_gru": {
+      "by_seed": [
+        0.00020358306188916764,
+        0.001832247557003286,
+        0.0013232899022801448
+      ],
+      "mean": 0.001119706840390866,
+      "bootstrap_95ci": [
+        -0.0008143322475570031,
+        0.002951954397394137
+      ]
+    },
+    "v2_minus_neural_bigru_attn": {
+      "by_seed": [
+        0.001730456026058591,
+        0.0,
+        -0.001221498371335561
+      ],
+      "mean": 0.00016965255157434336
+    }
+  },
+  "aggregate": {
+    "neural_gru": {
+      "accuracy": {
+        "mean": 0.7335776330076005,
+        "std": 0.00840278658001875
+      },
+      "macro_f1": {
+        "mean": 0.7315241788515721,
+        "std": 0.00992770401251579
+      }
+    },
+    "v1_order_gru": {
+      "accuracy": {
+        "mean": 0.7354438110749185,
+        "std": 0.008131225746556019
+      },
+      "macro_f1": {
+        "mean": 0.7336328952492152,
+        "std": 0.009573609379910725
+      }
+    },
+    "v2_order_gru": {
+      "accuracy": {
+        "mean": 0.7346973398479913,
+        "std": 0.00880736969294249
+      },
+      "macro_f1": {
+        "mean": 0.7328976950339602,
+        "std": 0.010217233719668638
+      }
+    },
+    "neural_bigru_attn": {
+      "accuracy": {
+        "mean": 0.7333740499457111,
+        "std": 0.007967314444539835
+      },
+      "macro_f1": {
+        "mean": 0.7312395129768587,
+        "std": 0.009497963791341081
+      }
+    },
+    "v2_order_bigru_attn": {
+      "accuracy": {
+        "mean": 0.7335437024972856,
+        "std": 0.006850602803418681
+      },
+      "macro_f1": {
+        "mean": 0.731440496807468,
+        "std": 0.008296306595198118
+      }
+    }
+  }
+}

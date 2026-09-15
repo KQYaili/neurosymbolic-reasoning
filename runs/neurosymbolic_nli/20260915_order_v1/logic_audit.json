@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "scope": "Mathematical derivations and deterministic implementation checks",
+  "created_utc": "2026-09-15T13:03:19.103437+00:00",
+  "torch_version": "2.13.0+cu132",
+  "seed": 20260915,
+  "all_passed": true,
+  "checks": {
+    "exact_energy_characterizes_coordinate_order": true,
+    "exact_reflexivity": true,
+    "exact_coordinate_antisymmetry": true,
+    "exact_transitivity": true,
+    "positive_threshold_transitivity_counterexample": true,
+    "randomized_directed_triangle_bound": true,
+    "tight_directed_triangle_bound": true,
+    "broadcast_autograd_matches_analytic_derivatives": true,
+    "held_out_edge_is_not_observed": true,
+    "held_out_edge_has_observed_path_witness": true,
+    "all_path_witnesses_use_only_observed_edges": true,
+    "graph_closure_matches_independent_reference": true,
+    "graph_does_not_invent_reverse_or_unrelated_edges": true,
+    "scc_handles_mutual_reachability": true,
+    "scc_quotient_is_dag": true,
+    "empty_graph_supported": true,
+    "self_loop_and_isolated_node_supported": true,
+    "training_cpu_rng_state_unchanged": true
+  },
+  "proof_notes": {
+    "energy": "A sum of nonnegative squares is zero iff each v_k-u_k <= 0.",
+    "reflexivity": "Every coordinate satisfies u_k >= u_k, so E(u,u)=0.",
+    "antisymmetry": "u>=v and v>=u imply equality in every coordinate.",
+    "transitivity": "u>=v and v>=w imply u>=w coordinatewise.",
+    "triangle_bound": "relu(w-u) <= relu(v-u)+relu(w-v) coordinatewise; monotonicity and the triangle inequality of the Euclidean norm give sqrt(E(u,w)) <= sqrt(E(u,v))+sqrt(E(v,w)).",
+    "scc_quotient": "Mutual reachability is an equivalence relation. A cycle between distinct quotient components would make those components mutually reachable, contradicting their separation."
+  },
+  "exact_finite_grid": {
+    "coordinates": "{0,1,2,3}^3",
+    "vectors": 64,
+    "ordered_pairs_checked": 4096,
+    "triples_checked": 262144,
+    "transitivity_violations": 0,
+    "numeric_type": "int64; no floating threshold"
+  },
+  "threshold_counterexample": {
+    "A": [
+      0.0
+    ],
+    "B": [
+      0.2
+    ],
+    "C": [
+      0.4
+    ],
+    "E_AB": 0.04000000000000001,
+    "E_BC": 0.04000000000000001,
+    "E_AC": 0.16000000000000003,
+    "threshold": 0.05,
+    "decision_rule": "E(x,y) < threshold",
+    "conclusion": "The positive-threshold relation is not transitive."
+  },
+  "randomized_triangle_check": {
+    "trials": 4096,
+    "dimension": 17,
+    "dtype": "float64",
+    "absolute_tolerance": 1e-12,
+    "maximum_lhs_minus_rhs": -1.305298960825776,
+    "note": "Random checks test implementation; the proof is above."
+  },
+  "discrete_graph": {
+    "nodes": [
+      "A",
+      "A_equiv",
+      "B",
+      "C",
+      "D"
+    ],
+    "observed_edges": [
+      [
+        "A",
+        "A_equiv"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "A_equiv",
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ]
+    ],
+    "reflexive_closure": [
+      {
+        "source": "A",
+        "target": "A",
+        "path": [
+          "A"
+        ],
+        "observed_edge": false
+      },
+      {
+        "source": "A",
+        "target": "A_equiv",
+        "path": [
+          "A",
+          "A_equiv"
+        ],
+        "observed_edge": true
+      },
+      {
+        "source": "A",
+        "target": "B",
+        "path": [
+          "A",
+          "B"
+        ],
+        "observed_edge": true
+      },
+      {
+        "source": "A",
+        "target": "C",
+        "path": [
+          "A",
+          "B",
+          "C"
+        ],
+        "observed_edge": false
+      },
+      {
+        "source": "A_equiv",
+        "target": "A",
+        "path": [
+          "A_equiv",
+          "A"
+        ],
+        "observed_edge": true
+      },
+      {
+        "source": "A_equiv",
+        "target": "A_equiv",
+        "path": [
+          "A_equiv"
+        ],
+        "observed_edge": false
+      },
+      {
+        "source": "A_equiv",
+        "target": "B",
+        "path": [
+          "A_equiv",
+          "A",
+          "B"
+        ],
+        "observed_edge": false
+      },
+      {
+        "source": "A_equiv",
+        "target": "C",
+        "path": [
+          "A_equiv",
+          "A",
+          "B",
+          "C"
+        ],
+        "observed_edge": false
+      },
+      {
+        "source": "B",
+        "target": "B",
+        "path": [
+          "B"
+        ],
+        "observed_edge": false
+      },
+      {
+        "source": "B",
+        "target": "C",
+        "path": [
+          "B",
+          "C"
+        ],
+        "observed_edge": true
+      },
+      {
+        "source": "C",
+        "target": "C",
+        "path": [
+          "C"
+        ],
+        "observed_edge": false
+      },
+      {
+        "source": "D",
+        "target": "D",
+        "path": [
+          "D"
+        ],
+        "observed_edge": false
+      }
+    ],
+    "strongly_connected_components": [
+      [
+        "A",
+        "A_equiv"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ],
+      [
+        "D"
+      ]
+    ],
+    "component_of": {
+      "A": 0,
+      "A_equiv": 0,
+      "B": 1,
+      "C": 2,
+      "D": 3
+    },
+    "quotient_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "quotient_topological_order": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "quotient_is_dag": true,
+    "semantics": "Reflexive graph reachability; input edge truth is assumed."
+  },
+  "held_out_edge_demo": {
+    "edge": [
+      "A",
+      "C"
+    ],
+    "path_witness": [
+      "A",
+      "B",
+      "C"
+    ],
+    "evaluation_type": "Logical closure of supplied edges over seen node IDs",
+    "training_performed": false
+  },
+  "limitations": [
+    "No empirical SNLI or other natural-language accuracy is measured here.",
+    "Theorems concern the exact vector order and graph relation, not a learned encoder's semantic correctness.",
+    "Graph closure can propagate incorrect learned edges; a path witness proves only derivability from supplied edges.",
+    "An unseen edge among known nodes is not zero-shot generalization to unseen sentences.",
+    "Sentence entailment is a preorder; quotienting by semantic equivalence yields a partial order.",
+    "Graph SCC equivalence need not be real semantic equivalence when edges are noisy.",
+    "Order energy alone distinguishes entailment from non-entailment, not contradiction from neutral.",
+    "Natural-language inference does not by itself identify intervention effects."
+  ],
+  "primary_sources": [
+    {
+      "title": "Order-Embeddings of Images and Language (ICLR 2016)",
+      "url": "https://arxiv.org/pdf/1511.06361",
+      "relevance": "Reversed product order, order-violation energy, and binary SNLI adaptation."
+    },
+    {
+      "title": "Stanford Natural Language Inference Corpus",
+      "url": "https://nlp.stanford.edu/projects/snli/",
+      "relevance": "SNLI's entailment, contradiction, and neutral labels."
+    }
+  ],
+  "output_path": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/neurosymbolic_nli/20260915_order_v1/logic_audit.json"
+}

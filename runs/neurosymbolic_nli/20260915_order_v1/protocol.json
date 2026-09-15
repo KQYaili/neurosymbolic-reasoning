@@ -1,0 +1,35 @@
+{
+  "task": "SNLI three-way natural-language inference, not causal effect estimation",
+  "train_examples": 60000,
+  "train_sampling_seed": 20260915,
+  "selection": "stratified sample from official train only",
+  "dev": "official dev, all valid labels",
+  "test": "official test, all valid labels; evaluate final checkpoints once after fixed training",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 4,
+  "batch_size": 256,
+  "max_length": 50,
+  "embedding_dim": 100,
+  "hidden_dim": 128,
+  "order_dim": 64,
+  "dropout": 0.2,
+  "learning_rate": 0.001,
+  "optimizer": "Adam",
+  "arms": {
+    "neural": {
+      "order_weight": 0.0
+    },
+    "order_regularized": {
+      "order_weight": 0.2
+    }
+  },
+  "order_margin": 0.2,
+  "checkpoint": "final epoch only",
+  "pairing": "same initial weights, shuffle seeds, optimizer settings and training batches",
+  "no_mid_run_tuning": true,
+  "baseline_notebook_sha256": "dbd7970541bb920c111faf7f5b1657fbb6b701d5002cc26457a369831155ecb8"
+}

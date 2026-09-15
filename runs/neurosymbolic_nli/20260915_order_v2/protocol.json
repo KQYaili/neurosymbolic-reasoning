@@ -1,0 +1,59 @@
+{
+  "task": "SNLI three-way natural-language inference, not causal effect estimation",
+  "train_examples": 60000,
+  "train_sampling_seed": 20260915,
+  "selection": "stratified sample from official train only",
+  "dev": "official dev, all valid labels",
+  "test": "official test, all valid labels; evaluate final checkpoints once after fixed training",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 4,
+  "batch_size": 256,
+  "max_length": 50,
+  "embedding_dim": 100,
+  "hidden_dim": 128,
+  "order_dim": 64,
+  "geo_bottleneck": 8,
+  "dropout": 0.2,
+  "learning_rate": 0.001,
+  "optimizer": "Adam",
+  "arms": {
+    "neural_gru": {
+      "encoder": "gru",
+      "loss_type": "none",
+      "aux_weight": 0.0,
+      "description": "Standard GRU baseline (hidden=128)"
+    },
+    "v1_order_gru": {
+      "encoder": "gru",
+      "loss_type": "v1",
+      "aux_weight": 0.2,
+      "description": "V1 Order-regularized GRU (binary non-entailment penalty, weight=0.2)"
+    },
+    "v2_order_gru": {
+      "encoder": "gru",
+      "loss_type": "v2_threeway",
+      "aux_weight": 0.03,
+      "description": "V2 3-Way Neurosymbolic GRU (containment + orthogonal contradiction + neutral margin, weight=0.03)"
+    },
+    "neural_bigru_attn": {
+      "encoder": "bigru_attn",
+      "loss_type": "none",
+      "aux_weight": 0.0,
+      "description": "Attentive BiGRU baseline (64x2=128, masked self-attention pooling)"
+    },
+    "v2_order_bigru_attn": {
+      "encoder": "bigru_attn",
+      "loss_type": "v2_threeway",
+      "aux_weight": 0.03,
+      "description": "V2 3-Way Neurosymbolic Attentive BiGRU (containment + orthogonal contradiction + neutral margin, weight=0.03)"
+    }
+  },
+  "order_margin": 0.15,
+  "checkpoint": "final epoch only",
+  "pairing": "same initial weights, shuffle seeds, optimizer settings and training batches per architecture family",
+  "no_mid_run_tuning": true
+}

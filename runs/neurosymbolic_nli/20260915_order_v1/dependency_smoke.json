@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "tokenize_word_char": true,
+  "truncate_pad": true,
+  "actual_snli_pairs": 8,
+  "multi_input_training_batches": 2,
+  "weights_updated": true,
+  "finite_model": true,
+  "accuracy": 0.875,
+  "scope": "current notebook helper definitions and original DecomposableAttention; not a quality estimate"
+}
