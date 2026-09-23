@@ -100,24 +100,24 @@ python experiments/neurosymbolic_nli/logic_audit.py --output-dir runs/neurosymbo
 ## 📁 Repository Structure
 
 ```
-neurosymbolic-nli/
 ├── experiments/
-│   └── neurosymbolic_nli/
-│       ├── model.py              # V1 Order Embedding Model
-│       ├── model_v2.py           # V2 3-Way Neurosymbolic Model & Loss
-│       ├── data.py               # SNLI data pipeline & GloVe tokenizer
-│       ├── run_experiment.py     # V1 paired experiment runner
-│       ├── run_experiment_v2.py  # V2 multi-arm paired runner
-│       ├── logic_audit.py        # 18-item discrete logic auditor
-│       ├── verify_results.py     # Independent metrics verifier
-│       └── build_report_v2.py    # Automated report & figure generator
+│   ├── neurosymbolic_nli/        # BiGRU / GloVe tracks (V1 & V2)
+│   └── local_scheme_validation/  # Modern Decoder-LLM Track (Qwen2.5-0.5B + LoRA)
+│       ├── synthetic_data.py     # Controlled relational logic data generator
+│       ├── train.py              # 5-arm controlled training with token budget match
+│       ├── evaluate.py           # Sealed evaluation with bootstrap paired CIs
+│       ├── verify_results.py     # 7-point independent audit & dev replay
+│       └── build_report.py       # Chinese review, charts & notebook exporter
 ├── runs/
-│   └── neurosymbolic_nli/
-│       ├── 20260915_order_v1/    # V1 trial logs & artifacts
-│       ├── 20260915_order_v2/    # V2 3-way trial logs & artifacts
-│       └── 20260915_review_v3/   # Theoretical reviews & holdout audits
+│   ├── neurosymbolic_nli/
+│   │   ├── 20260915_order_v1/    # V1 trial logs & artifacts
+│   │   ├── 20260915_order_v2/    # V2 3-way trial logs & artifacts
+│   │   └── 20260915_review_v3/   # Theoretical reviews & holdout audits
+│   └── local_scheme_validation/
+│       └── 20260923_relational_v2/ # Modern 5-arm Qwen2.5-0.5B LoRA trials & report
 ├── notebooks/
-│   └── neurosymbolic_nli_demo.ipynb
+│   ├── neurosymbolic_nli_demo.ipynb
+│   └── 2.relational_local.ipynb
 ├── requirements.txt
 ├── LICENSE
 └── README.md

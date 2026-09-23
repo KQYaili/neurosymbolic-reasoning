@@ -1,0 +1,16 @@
+{
+  "new_kernel_only": true,
+  "user_kernel_restarted": false,
+  "code_cells_executed": 3,
+  "error_outputs": 0,
+  "appended_cell_ids": [
+    "relational-local-v4-0",
+    "relational-local-v4-1",
+    "relational-local-v4-2",
+    "relational-local-v4-3",
+    "relational-local-v4-4"
+  ],
+  "notebook_sha256": "c02e8154b199c83ddee5e2452e9cb1c7e1db8d263715b38c294417b881845f1e",
+  "standalone_sha256": "3d871031e8d7eb60d1fc8538e071e8eb1b4f04e15e2f7653d1946737350a5bc9",
+  "backup": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/local_scheme_validation/20260923_relational_v2/2.before_local_appendix.20260923T110026Z.ipynb"
+}

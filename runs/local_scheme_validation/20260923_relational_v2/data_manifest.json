@@ -1,0 +1,379 @@
+{
+  "generation_config": {
+    "version": "controlled_relational_v2_larger_ood",
+    "seed": 20260923,
+    "source_bundles_per_task": {
+      "train": 1024,
+      "dev": 128,
+      "test": 256,
+      "ood": 2048
+    },
+    "supervised_sources_per_task": 102,
+    "supervision_fraction_actual": 0.099609375,
+    "supervision_sampling": "fixed-seed stratified by base NLI label or MCQA correct position",
+    "nli": {
+      "id_atoms": 3,
+      "id_max_literal_leaves": 3,
+      "ood_atoms": 4,
+      "ood_literal_leaves": 4,
+      "ood_each_formula_depends_on_all_four_atoms": true,
+      "satisfiable_premise_and_hypothesis": true,
+      "variants": [
+        "base",
+        "swap"
+      ],
+      "label_map": {
+        "A": "entailment",
+        "B": "contradiction",
+        "C": "neutral"
+      },
+      "swap_allowed": {
+        "A": [
+          "A",
+          "C"
+        ],
+        "B": [
+          "B"
+        ],
+        "C": [
+          "A",
+          "C"
+        ]
+      },
+      "cross_split_exclusion": "unordered pair of complete truth masks plus atom count",
+      "supervised_swap_target": "allowed set derived only from supervised base label; never reverse oracle label"
+    },
+    "mcqa": {
+      "id_operators": [
+        "add",
+        "subtract",
+        "multiply"
+      ],
+      "id_operand_range": [
+        2,
+        40
+      ],
+      "ood_operators": [
+        "add_then_multiply",
+        "multiply_then_add",
+        "subtract_then_multiply"
+      ],
+      "ood_main_operand_range": [
+        41,
+        99
+      ],
+      "ood_third_operand_range": [
+        2,
+        7
+      ],
+      "variants": 4,
+      "permutation_family": "four cyclic shifts of randomized base order",
+      "correct_position_and_numeric_rank": "balanced jointly; canonical option ID also balanced",
+      "distinct_options": true,
+      "distractor_offsets_id": [
+        1,
+        12
+      ],
+      "distractor_offsets_ood": [
+        1,
+        25
+      ],
+      "cross_split_exclusion": "expression signature; commutative operands canonicalized"
+    },
+    "test_policy": "Frozen before training; do not alter after viewing test/OOD outcomes.",
+    "truth_policy": "All hidden labels and structured oracles only in oracle.json; trainer uses data.json and training_view()."
+  },
+  "base_data_sha256": "c085180d2149ce1f8fee0513f16aa45de4d8d0075090fc3fdb98a0cf89bdeb2b",
+  "generator_sha256": "a53ad992c773258570201c17862f7e32608ff63cba8800e6cad9746d3392ff09",
+  "extension_sha256": "abbcd48300ba9c40298ef1eba8fc471622b66f017f7f64cbc80ccc5351f1e635",
+  "artifacts_sha256": {
+    "data.json": "82bcfe6ee2523cb2ad631309d6bc1979361e809c4bba2bef7078e22aa8d7f7e4",
+    "oracle.json": "fb3035275cc8e86b81580cecf52a5ea80ac72ca2ce780f99925e54f7eb0fb420"
+  },
+  "audit": {
+    "all_passed": true,
+    "checks": {
+      "swap_rule_all_65025_nonempty_three_atom_truth_set_pairs": true,
+      "entailment_reverse_is_not_uniquely_determined": true,
+      "neutral_reverse_is_not_uniquely_determined": true,
+      "all_source_sizes_and_base_label_balances": true,
+      "unique_source_ids": true,
+      "no_cross_split_source_signature_overlap": true,
+      "no_cross_split_prompt_overlap_including_variants": true,
+      "independent_truth_table_and_arithmetic_recomputation": true,
+      "ood_all_four_atoms_and_more_complex_than_id": true,
+      "all_mcqa_permutations_and_gold_transport": true,
+      "no_hidden_gold_or_unjustified_nli_allowed_masks_in_data": true,
+      "exact_102_supervised_sources_per_task": true,
+      "mcqa_numeric_rank_and_option_identity_balanced": true,
+      "all_gold_entries_accounted_for": true,
+      "original_train_dev_test_unchanged": true
+    },
+    "statistics": {
+      "exhaustive_swap_counts": {
+        "A->A": 255,
+        "A->C": 6050,
+        "B->B": 6050,
+        "C->A": 6050,
+        "C->C": 46620
+      },
+      "exhaustive_domain": "All 255 nonempty subsets of 8 worlds (3 Boolean atoms), ordered pairs; not all 4-atom truth sets.",
+      "label_counts": {
+        "train/nli": {
+          "C": 341,
+          "A": 342,
+          "B": 341
+        },
+        "train/mcqa": {
+          "D": 256,
+          "A": 256,
+          "C": 256,
+          "B": 256
+        },
+        "dev/nli": {
+          "A": 43,
+          "B": 43,
+          "C": 42
+        },
+        "dev/mcqa": {
+          "A": 32,
+          "C": 32,
+          "D": 32,
+          "B": 32
+        },
+        "test/nli": {
+          "A": 86,
+          "B": 85,
+          "C": 85
+        },
+        "test/mcqa": {
+          "A": 64,
+          "B": 64,
+          "C": 64,
+          "D": 64
+        },
+        "ood/nli": {
+          "B": 683,
+          "A": 683,
+          "C": 682
+        },
+        "ood/mcqa": {
+          "B": 512,
+          "A": 512,
+          "C": 512,
+          "D": 512
+        }
+      },
+      "supervised_label_counts": {
+        "train/nli": {
+          "C": 34,
+          "B": 34,
+          "A": 34
+        },
+        "train/mcqa": {
+          "A": 26,
+          "C": 25,
+          "B": 26,
+          "D": 25
+        },
+        "dev/nli": {},
+        "dev/mcqa": {},
+        "test/nli": {},
+        "test/mcqa": {},
+        "ood/nli": {},
+        "ood/mcqa": {}
+      },
+      "mcqa_correct_numeric_rank_counts": {
+        "train": {
+          "0": 256,
+          "2": 256,
+          "3": 256,
+          "1": 256
+        },
+        "dev": {
+          "2": 32,
+          "1": 32,
+          "3": 32,
+          "0": 32
+        },
+        "test": {
+          "3": 64,
+          "2": 64,
+          "0": 64,
+          "1": 64
+        },
+        "ood": {
+          "1": 537,
+          "3": 506,
+          "0": 501,
+          "2": 504
+        }
+      },
+      "mcqa_correct_semantic_id_counts": {
+        "train": {
+          "3": 256,
+          "1": 256,
+          "2": 256,
+          "0": 256
+        },
+        "dev": {
+          "2": 32,
+          "0": 32,
+          "1": 32,
+          "3": 32
+        },
+        "test": {
+          "1": 64,
+          "0": 64,
+          "2": 64,
+          "3": 64
+        },
+        "ood": {
+          "1": 485,
+          "3": 526,
+          "0": 515,
+          "2": 522
+        }
+      },
+      "split_signature_intersections": {
+        "train/dev": 0,
+        "train/test": 0,
+        "train/ood": 0,
+        "dev/test": 0,
+        "dev/ood": 0,
+        "test/ood": 0
+      },
+      "split_prompt_intersections": {
+        "train/dev": 0,
+        "train/test": 0,
+        "train/ood": 0,
+        "dev/test": 0,
+        "dev/ood": 0,
+        "test/ood": 0
+      },
+      "supervised_nli_swap_allowed_cardinality_counts": {
+        "non_unique_allowed": 68,
+        "unique_allowed": 34
+      },
+      "source_bundles": 6912,
+      "variants": 20736
+    },
+    "consistency_gaming_diagnostics": {
+      "train": {
+        "nli_constant_label": {
+          "A": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.333984375
+          },
+          "B": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.3330078125
+          },
+          "C": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.3330078125
+          }
+        },
+        "mcqa_uniform_conditional_distribution": {
+          "mapped_js_divergence": 0.0,
+          "expected_accuracy": 0.25
+        },
+        "mcqa_constant_semantic_option_0": {
+          "equivariance_consistency": 1.0,
+          "accuracy": 0.25
+        },
+        "mcqa_always_position_A": {
+          "base_accuracy": 0.25,
+          "base_to_nonidentity_variant_consistency": 0.0
+        }
+      },
+      "dev": {
+        "nli_constant_label": {
+          "A": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.3359375
+          },
+          "B": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.3359375
+          },
+          "C": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.328125
+          }
+        },
+        "mcqa_uniform_conditional_distribution": {
+          "mapped_js_divergence": 0.0,
+          "expected_accuracy": 0.25
+        },
+        "mcqa_constant_semantic_option_0": {
+          "equivariance_consistency": 1.0,
+          "accuracy": 0.25
+        },
+        "mcqa_always_position_A": {
+          "base_accuracy": 0.25,
+          "base_to_nonidentity_variant_consistency": 0.0
+        }
+      },
+      "test": {
+        "nli_constant_label": {
+          "A": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.3359375
+          },
+          "B": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.33203125
+          },
+          "C": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.33203125
+          }
+        },
+        "mcqa_uniform_conditional_distribution": {
+          "mapped_js_divergence": 0.0,
+          "expected_accuracy": 0.25
+        },
+        "mcqa_constant_semantic_option_0": {
+          "equivariance_consistency": 1.0,
+          "accuracy": 0.25
+        },
+        "mcqa_always_position_A": {
+          "base_accuracy": 0.25,
+          "base_to_nonidentity_variant_consistency": 0.0
+        }
+      },
+      "ood": {
+        "nli_constant_label": {
+          "A": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.33349609375
+          },
+          "B": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.33349609375
+          },
+          "C": {
+            "swap_consistency": 1.0,
+            "base_accuracy": 0.3330078125
+          }
+        },
+        "mcqa_uniform_conditional_distribution": {
+          "mapped_js_divergence": 0.0,
+          "expected_accuracy": 0.25
+        },
+        "mcqa_constant_semantic_option_0": {
+          "equivariance_consistency": 1.0,
+          "accuracy": 0.25146484375
+        },
+        "mcqa_always_position_A": {
+          "base_accuracy": 0.25,
+          "base_to_nonidentity_variant_consistency": 0.0
+        }
+      }
+    },
+    "diagnostic_caveat": "Consistency alone permits vacuous/constant solutions; evaluate accuracy, invalid full-vocabulary outputs, and teacher confidence separately."
+  },
+  "rank_balance_scope": "OOD numeric ranks/semantic IDs within 64 of each other; actual counts retained",
+  "ood_scope": "Both greater logical/arithmetic complexity and new surface wording; effects not disentangled"
+}

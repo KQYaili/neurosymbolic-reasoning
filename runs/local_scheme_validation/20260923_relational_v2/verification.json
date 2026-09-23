@@ -1,0 +1,101 @@
+{
+  "all_passed": true,
+  "checks": {
+    "frozen_source_protocol_model_and_data_hashes": true,
+    "independent_truth_split_and_label_access_audit": true,
+    "all_15_final_adapters_and_paired_training_records": true,
+    "all_96_prediction_files_and_metrics_independently_recomputed": true,
+    "paired_ci_balanced_means_and_prespecified_gates": true,
+    "independent_logic_and_numerical_mechanism_checks": true,
+    "fixed_dev_checkpoint_replay": true
+  },
+  "dataset_counts": {
+    "train/nli": {
+      "sources": 1024,
+      "exposed_labels": 102
+    },
+    "train/mcqa": {
+      "sources": 1024,
+      "exposed_labels": 102
+    },
+    "dev/nli": {
+      "sources": 128,
+      "exposed_labels": 0
+    },
+    "dev/mcqa": {
+      "sources": 128,
+      "exposed_labels": 0
+    },
+    "test/nli": {
+      "sources": 256,
+      "exposed_labels": 0
+    },
+    "test/mcqa": {
+      "sources": 256,
+      "exposed_labels": 0
+    },
+    "ood/nli": {
+      "sources": 2048,
+      "exposed_labels": 0
+    },
+    "ood/mcqa": {
+      "sources": 2048,
+      "exposed_labels": 0
+    }
+  },
+  "dev_replay": {
+    "passed": true,
+    "cases": [
+      {
+        "arm": "sft_compute",
+        "task": "nli",
+        "dev_ids": [
+          "nli-dev-0013",
+          "nli-dev-0051",
+          "nli-dev-0085",
+          "nli-dev-0015"
+        ],
+        "max_logit_delta": 0.00023651123046875
+      },
+      {
+        "arm": "sft_compute",
+        "task": "mcqa",
+        "dev_ids": [
+          "mcqa-dev-0104",
+          "mcqa-dev-0074",
+          "mcqa-dev-0068",
+          "mcqa-dev-0111"
+        ],
+        "max_logit_delta": 0.0001964569091796875
+      },
+      {
+        "arm": "relational",
+        "task": "nli",
+        "dev_ids": [
+          "nli-dev-0013",
+          "nli-dev-0051",
+          "nli-dev-0085",
+          "nli-dev-0015"
+        ],
+        "max_logit_delta": 4.76837158203125e-05
+      },
+      {
+        "arm": "relational",
+        "task": "mcqa",
+        "dev_ids": [
+          "mcqa-dev-0104",
+          "mcqa-dev-0074",
+          "mcqa-dev-0068",
+          "mcqa-dev-0111"
+        ],
+        "max_logit_delta": 7.2479248046875e-05
+      }
+    ],
+    "dtype": "float32_no_tf32",
+    "no_test_based_selection": true
+  },
+  "summary_sha256": "2160a73f37312f207f0dc8bed471c283041e4ca76c688b92919107e9d7099f4c",
+  "script_sha256": "8a1c0149e0e427112debbab6c367372d893a3b1ec6541a1f834a12ee9e675c6c",
+  "effectiveness_gates_passed": false,
+  "scope": "Integrity pass is separate from statistical effectiveness; no human real-world causal validation."
+}

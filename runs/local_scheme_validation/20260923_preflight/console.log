@@ -1,0 +1,27 @@
+Local model: Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775
+Status: awaiting_scheme. This checks runtime feasibility only.
+{
+  "status": "awaiting_scheme",
+  "forward": {
+    "passed": true,
+    "finite": true,
+    "parameters": 494032768,
+    "input_shape": [
+      1,
+      7
+    ],
+    "logits_shape": [
+      1,
+      7,
+      151936
+    ],
+    "dtype": "torch.bfloat16",
+    "cuda_peak_allocated_mib": 989.93212890625,
+    "cuda_peak_reserved_mib": 1024.0,
+    "load_and_forward_seconds": 1.2465245710336603,
+    "training_steps": 0,
+    "semantic_accuracy_evaluated": false
+  },
+  "model_weights_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+  "report_directory": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/local_scheme_validation/20260923_preflight"
+}

@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "65025_swap_relations_sound": true,
+    "equivalence_entails_both_ways": true,
+    "neutral_can_reverse_to_entailment": true,
+    "allowed_loss_matches_explicit_probability_sum": true,
+    "allowed_loss_finite_gradient": true,
+    "permutation_alignment_direction_correct": true,
+    "uniform_distribution_has_zero_js_but_no_accuracy_guarantee": true,
+    "fp32_trained_padding_batch_invariance_atol_0_0002": true,
+    "fp32_trained_argmax_invariance": true
+  },
+  "all_passed": true,
+  "dtype": "float32_no_tf32",
+  "maximum_logit_difference": 0.00011432170867919922,
+  "mean_logit_difference": 1.4887431461829692e-05,
+  "adapter_sha256": "7257d6887b31b4dc127e055d366101cd628f5e63d62b71fa190462ab0d6915dd",
+  "script_sha256": "3506c2792f1dc68051120b244dfbfbd833b3dcc42353daebe1a3bb62a47013e2",
+  "no_heldout_task_examples_used": true
+}

@@ -1,0 +1,85 @@
+bitsandbytes library load error: Configured CUDA binary not found at /home/lgd/anaconda3/lib/python3.13/site-packages/bitsandbytes/libbitsandbytes_cuda132.so
+Traceback (most recent call last):
+  File "/home/lgd/anaconda3/lib/python3.13/site-packages/bitsandbytes/cextension.py", line 320, in <module>
+    lib = get_native_library()
+  File "/home/lgd/anaconda3/lib/python3.13/site-packages/bitsandbytes/cextension.py", line 288, in get_native_library
+    raise RuntimeError(f"Configured {BNB_BACKEND} binary not found at {cuda_binary_path}")
+RuntimeError: Configured CUDA binary not found at /home/lgd/anaconda3/lib/python3.13/site-packages/bitsandbytes/libbitsandbytes_cuda132.so
+{
+  "status": "throughput_only",
+  "config": {
+    "batch_size": 8,
+    "sequence_length": 128,
+    "warmup_steps": 3,
+    "timed_steps": 5,
+    "seed": 9023,
+    "base_dtype": "bfloat16",
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "lr": 0.0002,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "padding_side": "left",
+    "explicit_position_ids": true,
+    "logits_to_keep": 1,
+    "use_cache": false,
+    "gradient_checkpointing": false,
+    "loss": "full-vocabulary next-token cross entropy, always target A",
+    "target_token_id": 32,
+    "trainable_parameters": 540672,
+    "trainable_dtypes": [
+      "torch.float32"
+    ],
+    "prompt_token_sha256": "8b9286e3d05bcf518edd5331f20d840b23e455be3c48ac6c97cdbd73bbdd9161",
+    "all_8_inputs_identical": true
+  }
+}
+{"step": 1, "phase": "warmup", "seconds": 1.8128128560492769, "loss": 18.816375732421875, "finite_loss": true, "finite_gradients": true, "gradient_tensor_count": 96}
+{"step": 2, "phase": "warmup", "seconds": 0.09853451902745292, "loss": 17.97419548034668, "finite_loss": true, "finite_gradients": true, "gradient_tensor_count": 96}
+{"step": 3, "phase": "warmup", "seconds": 0.09012573899235576, "loss": 15.952232360839844, "finite_loss": true, "finite_gradients": true, "gradient_tensor_count": 96}
+{"step": 4, "phase": "timed", "seconds": 0.09334784699603915, "loss": 13.853822708129883, "finite_loss": true, "finite_gradients": true, "gradient_tensor_count": 96}
+{"step": 5, "phase": "timed", "seconds": 0.0905609320034273, "loss": 10.847655296325684, "finite_loss": true, "finite_gradients": true, "gradient_tensor_count": 96}
+{"step": 6, "phase": "timed", "seconds": 0.09342648199526593, "loss": 7.963555812835693, "finite_loss": true, "finite_gradients": true, "gradient_tensor_count": 96}
+{"step": 7, "phase": "timed", "seconds": 0.10093364800559357, "loss": 5.918754577636719, "finite_loss": true, "finite_gradients": true, "gradient_tensor_count": 96}
+{"step": 8, "phase": "timed", "seconds": 0.09929316595662385, "loss": 3.7705984115600586, "finite_loss": true, "finite_gradients": true, "gradient_tensor_count": 96}
+{
+  "status": "throughput_only",
+  "created_at_utc": "2026-09-23T09:46:02.221134+00:00",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "script_sha256": "e9c2e9e5a11be38cce6d3928e25f23081cb002177c5603a23aaaac5a1555b3b1",
+  "scheme_effectiveness_evaluated": false,
+  "real_train_dev_test_data_accessed": false,
+  "local_files_only": true,
+  "trust_remote_code": false,
+  "checkpoint_saved": false,
+  "seconds_per_step_mean": 0.09551241499138996,
+  "seconds_per_step_min": 0.0905609320034273,
+  "seconds_per_step_max": 0.10093364800559357,
+  "examples_per_second": 83.75874487857067,
+  "input_tokens_per_second": 10721.119344457045,
+  "training_peak_allocated_mib": 2201.779296875,
+  "training_peak_reserved_mib": 2242.0,
+  "batch_single_consistency": {
+    "tested_after_8_smoke_steps": true,
+    "input_lengths": [
+      64,
+      128
+    ],
+    "atol": 0.125,
+    "rtol": 0.02,
+    "max_absolute_logit_difference": 0.78125,
+    "mean_absolute_logit_difference": 0.09998776763677597,
+    "allclose": false,
+    "argmax_equal": true,
+    "all_logits_finite": true,
+    "scope": "BF16 numerical smoke only; no exact invariance or semantic accuracy claim."
+  },
+  "passed": false,
+  "limitations": "Eight identical artificial inputs; task-specific lengths, losses and relational expansion may cost more. No trained weights retained."
+}

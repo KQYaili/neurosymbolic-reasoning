@@ -1,0 +1,18 @@
+{
+  "protocol_sha256": "f5928fa8b91b320401a3db27e6503b10ef7385bade321d414fa3638b03b601c1",
+  "data_sha256": "21d7dc526c6ed85d20b763f686603f40392b86c6d2eadb3de8b7f3c9c2d6e1b4",
+  "data_manifest_sha256": "44f1787ac5204d61efbe36fe6d23c644c746759daf74c9a07cb92f723eef72c9",
+  "sources": {
+    "train.py": "749856e78c5d9b1c783944e99de188d272622d567d731c24cfa90f867bc1a5f2",
+    "synthetic_data.py": "a53ad992c773258570201c17862f7e32608ff63cba8800e6cad9746d3392ff09",
+    "extend_evaluation.py": "abbcd48300ba9c40298ef1eba8fc471622b66f017f7f64cbc80ccc5351f1e635"
+  },
+  "base_files": {
+    "model.safetensors": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+    "config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+  },
+  "torch_version": "2.13.0+cu132",
+  "train_reads_oracle": false
+}
