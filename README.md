@@ -118,8 +118,8 @@ This repository enforces an automated 7-point CPU audit ([`verify_results.py`](e
 
 ### 1. Setup Environment
 ```bash
-git clone https://github.com/KQYaili/neurosymbolic-nli.git
-cd neurosymbolic-nli
+git clone https://github.com/KQYaili/neurosymbolic-reasoning.git
+cd neurosymbolic-reasoning
 pip install -r requirements.txt
 ```
 
