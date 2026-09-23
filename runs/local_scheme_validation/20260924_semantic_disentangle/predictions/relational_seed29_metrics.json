@@ -1,0 +1,113 @@
+{
+  "arm": "relational",
+  "seed": 29,
+  "adapter_path": "/mnt/c/Users/lgd/PycharmProjects/JupyterProject1/runs/local_scheme_validation/20260923_relational_v2/adapters/relational_seed29",
+  "ood": {
+    "nli": {
+      "accuracy": 0.415771484375,
+      "base_accuracy": 0.49365234375,
+      "atc": 0.29248046875,
+      "rvr": 0.34326171875,
+      "macro_f1_all_views": 0.36087498026723885,
+      "class_f1": [
+        0.5204991087344029,
+        0.5550408118243989,
+        0.00708502024291498
+      ],
+      "confusion_matrix": [
+        [
+          438,
+          330,
+          0
+        ],
+        [
+          101,
+          1258,
+          7
+        ],
+        [
+          376,
+          1579,
+          7
+        ]
+      ],
+      "bundles": 2048,
+      "views": 2,
+      "raw_first_token_invalid_rate": 0.0,
+      "raw_first_token_accuracy": 0.415771484375,
+      "valid_label_probability_mass": 0.9988089799880981,
+      "mean_entropy": 0.6882718801498413,
+      "prediction_histogram": [
+        915,
+        3167,
+        14
+      ],
+      "conditional_transformed_accuracy_given_correct_original": 0.592482690405539,
+      "all_transforms_correct_given_correct_original": 0.592482690405539,
+      "near_tie_fraction_margin_below_0_0004": 0.0,
+      "allowed_label_probability_mass": 0.49035125970840454,
+      "allowed_mass_scope": "Conditional class mass of the reverse allowed set derived from the true original label"
+    },
+    "mcqa": {
+      "accuracy": 0.3226318359375,
+      "base_accuracy": 0.32177734375,
+      "atc": 0.06396484375,
+      "rvr": 0.5872395833333334,
+      "macro_f1_all_views": 0.3064829312207999,
+      "class_f1": [
+        0.38584667228306657,
+        0.3276723276723277,
+        0.3068245910885505,
+        0.20558813383925492
+      ],
+      "confusion_matrix": [
+        [
+          1145,
+          427,
+          309,
+          167
+        ],
+        [
+          890,
+          656,
+          322,
+          180
+        ],
+        [
+          866,
+          432,
+          544,
+          206
+        ],
+        [
+          986,
+          441,
+          323,
+          298
+        ]
+      ],
+      "bundles": 2048,
+      "views": 4,
+      "raw_first_token_invalid_rate": 0.0,
+      "raw_first_token_accuracy": 0.3226318359375,
+      "valid_label_probability_mass": 0.9986764788627625,
+      "mean_entropy": 1.0235507488250732,
+      "prediction_histogram": [
+        3887,
+        1956,
+        1498,
+        851
+      ],
+      "conditional_transformed_accuracy_given_correct_original": 0.4759736975214972,
+      "all_transforms_correct_given_correct_original": 0.19878603945371776,
+      "near_tie_fraction_margin_below_0_0004": 0.000244140625,
+      "allowed_label_probability_mass": 0.2964249849319458,
+      "allowed_mass_scope": "Conditional class mass of the true transported singleton label, all views"
+    }
+  },
+  "prediction_sha256": {
+    "relational_seed29_holdout_nli.npz": "71a8256c58cbaadf0c74056bc118d31826472f138175ae93b690d1728f971373",
+    "relational_seed29_holdout_mcqa.npz": "0ea16a103d371d00f0fd672f621aae734a2e2194c5c08a39ddc60498f09ba1c7"
+  },
+  "seconds": 128.54892896302044
+}

@@ -1,0 +1,8 @@
+{
+  "seed": 20260924,
+  "data_holdout_sha256": "7dbd85d6ca113f05740a388eb632a693ee9266e317bbe37b52fddccb3c0f372d",
+  "oracle_holdout_sha256": "41b675365818a4c23713018aaf545a95a4d65a829ec6fca78f83ec4a0d3faad4",
+  "nli_ood_sources": 2048,
+  "mcqa_ood_sources": 2048,
+  "zero_train_prompt_overlap": true
+}

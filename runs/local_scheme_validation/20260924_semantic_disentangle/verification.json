@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "holdout_manifest_hashes_match": true,
+    "contract_chain_intact": true,
+    "zero_prompt_leakage": true,
+    "zero_id_leakage": true,
+    "predictions_recomputed_and_verified": true,
+    "stopping_gates_logic_consistent": true,
+    "all_passed": true
+  },
+  "summary_sha256": "6f22648220f3fd363ea64ad02124852017dfd73bcf84e0e0c2b7848297261866",
+  "stopping_decision": "DEFINITIVE_STOP",
+  "stopping_gates": {
+    "candidate": "semantic_only",
+    "baseline": "consistency",
+    "target_task": "nli",
+    "atc_min_gain_met": false,
+    "atc_ci_positive_met": false,
+    "accuracy_noninferior_met": true,
+    "rvr_reduced_met": false,
+    "mcqa_guard_met": false,
+    "values": {
+      "delta_nli_atc_mean_pp": -1.0579427083333335,
+      "delta_nli_atc_ci_low_pp": -1.9856770833333333,
+      "delta_nli_accuracy_ci_low_pp": 0.8138020833333333,
+      "delta_nli_rvr_ci_high_pp": 3.4830729166666656,
+      "delta_mcqa_atc_ci_low_pp": -1.2044270833333333
+    },
+    "all_passed": false
+  }
+}

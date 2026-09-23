@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "6fdeef3bfda025b890f5fd89e17d54d67299a64b93b1a25b5cbcc473d462f68d",
+  "contract_sha256": "f7ba604868b9e0fbf2102050cdeb48d7a624beaa2114cbaa8c0645401ce8bb81",
+  "training_complete_sha256": "7da7389aa60370861a0f30e396bae040fed509a59ae482340fab3778c0642dad",
+  "data_holdout_sha256": "7dbd85d6ca113f05740a388eb632a693ee9266e317bbe37b52fddccb3c0f372d",
+  "oracle_holdout_sha256": "41b675365818a4c23713018aaf545a95a4d65a829ec6fca78f83ec4a0d3faad4",
+  "new_adapters": {
+    "adapters/format_only_seed17": "722674be9adfb3e332743c4d6025f8781031a7b82ed7d2d7793b6eb4f94639c0",
+    "adapters/semantic_only_seed17": "d68be1094c99ca754ed57ab248bd74035e43f729c356bdde552f2482cfc634b3",
+    "adapters/format_only_seed29": "f027eb276ace6f4d8c1982268bc96f12251182a0e96f0269515dffabf833c0b5",
+    "adapters/semantic_only_seed29": "52d401f83728ceba8fb98ba8d49099c7bf8c1b4f36289a80c18c74857b89c2c2",
+    "adapters/format_only_seed43": "e33afce765e345e03738cab195075fadaad486c360e22073f126a29e41ef6153",
+    "adapters/semantic_only_seed43": "204c36a235591eaca304c90b32152c557fac4632b34f2dfc3571692518991bec"
+  },
+  "reused_controls": {
+    "consistency": "runs/local_scheme_validation/20260923_relational_v2/adapters/consistency_seed{seed}",
+    "relational": "runs/local_scheme_validation/20260923_relational_v2/adapters/relational_seed{seed}"
+  },
+  "evaluator_sha256": "9ebca6fdc50f7fbc20867cd2970510844934e83b3bd7a4fc3c42df618c8a28ae",
+  "batch_size": 16,
+  "dtype": "float32_no_tf32"
+}

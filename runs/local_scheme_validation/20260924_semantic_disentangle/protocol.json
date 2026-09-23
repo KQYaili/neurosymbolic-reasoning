@@ -1,0 +1,44 @@
+{
+  "objective": "Test format (F) vs semantic (S) loss disentanglement on Qwen2.5-0.5B; final local experiment before stopping",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "snapshot": "/home/lgd/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "seeds": [17, 29, 43],
+  "steps": 256,
+  "bundles_per_group": 2,
+  "max_tokens": 256,
+  "learning_rate": 0.0002,
+  "gradient_clip": 1.0,
+  "lora": {"r": 8, "lora_alpha": 16, "lora_dropout": 0.0, "target_modules": ["q_proj", "v_proj"], "bias": "none"},
+  "training_precision": "BF16 base, FP32 LoRA and loss; fixed paired minibatches; no TF32",
+  "evaluation_precision": "FP32, TF32 disabled",
+  "arms": {
+    "format_only": {"exact_weight": 0.3, "partial_weight": 0.0, "format_weight": 0.3, "semantic_weight": 0.0, "equivariance_weight": 0.3, "swap_weight": 0.3},
+    "semantic_only": {"exact_weight": 0.3, "partial_weight": 0.0, "format_weight": 0.0, "semantic_weight": 0.3, "equivariance_weight": 0.3, "swap_weight": 0.3}
+  },
+  "reused_controls": {
+    "consistency": "runs/local_scheme_validation/20260923_relational_v2/adapters/consistency_seed{seed}",
+    "relational": "runs/local_scheme_validation/20260923_relational_v2/adapters/relational_seed{seed}"
+  },
+  "designated_candidate": "semantic_only",
+  "primary_baseline": "consistency",
+  "comparisons": [
+    ["semantic_only", "consistency"],
+    ["format_only", "consistency"],
+    ["semantic_only", "format_only"],
+    ["relational", "consistency"],
+    ["semantic_only", "relational"]
+  ],
+  "bootstrap_seed": 20260928,
+  "bootstrap_repetitions": 2000,
+  "stopping_gates": {
+    "candidate": "semantic_only",
+    "baseline": "consistency",
+    "target_task": "nli",
+    "atc_min_gain_pp": 2.0,
+    "atc_ci_lower_min_pp": 0.0,
+    "accuracy_ci_lower_min_pp": -1.0,
+    "rvr_ci_upper_max_pp": 0.0,
+    "mcqa_degradation_guard": true
+  }
+}
